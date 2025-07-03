@@ -2,9 +2,9 @@
 Esto es un challenge de la formacion de backend con java en alura latam
 
 
-## objetivo ##
+## Objetivo ##
 ## Funcionalidades ##
-
+## Herramientas utilizadas ##
 ## Mayores desafios en la creacion del proyecto ##
 * Comprender por completo la logica. 
 * conectar la base de datos al proyecto.
