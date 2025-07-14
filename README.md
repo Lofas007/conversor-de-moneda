@@ -1,5 +1,6 @@
 # conversor-de-moneda
-Esto es un challenge de la formacion de backend con java en alura latam
+Esto es un challenge de la formacion de backend con java en alura latam.
+OJO. seguimos trabajando en el para que tenga un codigo mas limpio y legible.
 
 
 ## Objetivo ##
