@@ -6,6 +6,7 @@ import java.net.http.HttpResponse;
 import com.google.gson.Gson;
 
 public interface Controladores {
+    double convertirMoneda(String monedaOrigen, String monedaDestino);
     public interface Main {
         public static void main(String[] args) throws Exception {
             String url = "https://api.exchangerate-api.com/v4/latest/USD";
@@ -18,18 +19,21 @@ public interface Controladores {
                     .build();
 
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        } } }
+
+
 
             // Convertir JSON a objeto Java con Gson
-            Gson gson = new Gson();
-            Conversor.CurrencyResponse resultado = gson.fromJson(response.body(), Conversor.CurrencyResponse.class);
+//            Gson gson = new Gson();
+//            Conversor.CurrencyResponse resultado = gson.fromJson(response.body(), Conversor.CurrencyResponse.class);
+//
+//            // Mostrar algunas tasas de cambio
+//            System.out.println("Base: " + resultado.getBase());
+//            System.out.println("Fecha: " + resultado.getDate());
+//            System.out.println("USD a DOP: " + resultado.getRates().get("DOP"));
+//            System.out.println("USD a EUR: " + resultado.getRates().get("EUR"));
+//            System.out.println("USD a DOP: " + resultado.getRates().get("DOP"));
+//            System.out.println("USD a CHF: " + resultado.getRates().get("CHF"));
+//        }
 
-            // Mostrar algunas tasas de cambio
-            System.out.println("Base: " + resultado.getBase());
-            System.out.println("Fecha: " + resultado.getDate());
-            System.out.println("USD a DOP: " + resultado.getRates().get("DOP"));
-            System.out.println("USD a EUR: " + resultado.getRates().get("EUR"));
-            System.out.println("USD a DOP: " + resultado.getRates().get("DOP"));
-            System.out.println("USD a CHF: " + resultado.getRates().get("CHF"));
-        }
-    }
-}
+

@@ -1,15 +1,22 @@
 package main.java;
 import java.util.Map;
-import java.util.Scanner;
-public class Conversor {
-    public class CurrencyResponse {
-        private String base;
-        private String date;
-        private Map<String, Double> rates;
+import com.google.gson.Gson;
+public class Conversor implements Controladores{
+    private Gson gson = new Gson();
 
-        // Getters y setters
-        public String getBase() { return base; }
-        public String getDate() { return date; }
-        public Map<String, Double> getRates() { return rates; }
+    @Override
+    public double convertirMoneda(String monedaOrigen, String monedaDestino) {
+        String jsonSimulado = "{ \"USD\": 1.0, \"DOP\": 59.45, \"EUR\": 0.91 }";
+        Map<String, Double> tasas = gson.fromJson(jsonSimulado, Map.class);
+
+        if (tasas.containsKey(monedaOrigen) && tasas.containsKey(monedaDestino)) {
+            double tasaOrigen = tasas.get(monedaOrigen);
+            double tasaDestino = tasas.get(monedaDestino);
+
+            return tasaDestino / tasaOrigen;
+        } else {
+            System.out.println("Monedas no válidas.");
+            return 0.0;
+        }
     }
 }

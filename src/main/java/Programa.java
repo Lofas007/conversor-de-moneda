@@ -1,26 +1,24 @@
 package main.java;
 import java.util.Scanner;
 
-
-public class Programa implements Controladores{
-  static Controladores accion = new Controladores() {
-      @Override
-      public int hashCode() {
-          return super.hashCode();
-      }
-  };
+//implements Controladores
+public class Programa  {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Ingrese moneda de origen (ej: USD, EUR): ");
-        String origen = scanner.nextLine();
+        Controladores conversor = new Conversor();
 
-        System.out.println("Ingrese moneda de destino (ej: DOP, ARG): ");
-        String destino = scanner.nextLine();
+        System.out.print("Ingrese moneda de origen (ej: USD): ");
+        String origen = scanner.nextLine().toUpperCase();
 
-        System.out.println("ingrese la cantidad que quiere convertir");
-        String resultado = scanner.nextLine();
+        System.out.print("Ingrese moneda de destino (ej: DOP): ");
+        String destino = scanner.nextLine().toUpperCase();
 
+        System.out.println("ingresa una cantidad");
+       String dale = scanner.nextLine();
+
+        double resultado = conversor.convertirMoneda(origen, destino);
+        System.out.println("Tasa de cambio de " + origen + " a " + destino + "es" + dale + ": " + resultado);
     }
 
 
