@@ -6,7 +6,7 @@ import java.net.http.HttpResponse;
 import com.google.gson.Gson;
 
 public interface Controladores {
-    public class Main {
+    public interface Main {
         public static void main(String[] args) throws Exception {
             String url = "https://api.exchangerate-api.com/v4/latest/USD";
 
@@ -29,6 +29,7 @@ public interface Controladores {
             System.out.println("USD a DOP: " + resultado.getRates().get("DOP"));
             System.out.println("USD a EUR: " + resultado.getRates().get("EUR"));
             System.out.println("USD a DOP: " + resultado.getRates().get("DOP"));
+            System.out.println("USD a CHF: " + resultado.getRates().get("CHF"));
         }
     }
 }

@@ -1,6 +1,6 @@
 package main.java;
 import java.util.Map;
-
+import java.util.Scanner;
 public class Conversor {
     public class CurrencyResponse {
         private String base;
@@ -12,5 +12,4 @@ public class Conversor {
         public String getDate() { return date; }
         public Map<String, Double> getRates() { return rates; }
     }
-
 }
