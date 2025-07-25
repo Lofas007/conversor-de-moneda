@@ -21,5 +21,7 @@ Desarrollar una aplicación de conversión de monedas en Java como proyecto prá
 
 ## Mayores desafios en la creacion del proyecto ##
 * Comprender por completo la logica. 
-* conectar la base de datos al proyecto.
-* comprender que seria lo mas optimo para diseñarlo. 
+* conectar la api de exchangeRate al proyecto.
+* comprender que seria lo mas optimo para diseñarlo.
+* Definir las importaciones necesarias para la web.
+* Esquematizacion de la estructura del proyecto simulando el modelo cliente-servidor.
